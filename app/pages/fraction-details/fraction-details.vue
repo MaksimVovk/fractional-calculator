@@ -48,6 +48,11 @@
         required: true
       },
     },
+    mounted () {
+      if (this.isEmptyState) {
+        this.$router.push('/main')
+      }
+    },
     computed: {
       ...mapGetters({
         rows: 'getRows',
@@ -55,7 +60,10 @@
       rowList () {
         return this.rows.filter(row => row.id == this.id)
       },
-    }
+      isEmptyState () {
+        return !this.rows.length
+      }
+    },
   }
 </script>
 

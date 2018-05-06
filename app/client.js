@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import router from './router'
 import ui from '../src'
-import store from '../src/store/store'
+import store from './store'
 import layout from './layout.vue'
 
 Vue.use(VueRouter)

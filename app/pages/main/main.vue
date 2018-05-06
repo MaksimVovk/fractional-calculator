@@ -25,7 +25,7 @@
             </tr>
           </thead>
           <tbody>
-            <router-link v-for="(row, i) of rows" tag="tr" :to="`fraction-details/${row.id}`" :id="row.id" :key="i" replace>
+            <router-link v-for="(row, i) of rows" tag="tr" :to="`fraction-details/${row.id}`" :id="row.id" :key="i">
               <td>{{row.id}}</td>
               <td>
                 <table-fraction :value="row.first"/>
@@ -68,8 +68,8 @@
       getResult () {
         const firstNum = [...this.firstNumber]
         const secondNum = [...this.secondNumber]
-
         const calculation = eval(`${fraction(this.firstNumber[0], this.firstNumber[1])} ${this.operation} ${fraction(this.secondNumber[0], this.secondNumber[1])}`)
+
         this.result = [fraction(calculation).n, fraction(calculation).d]
 
         this.$store.dispatch('setResult', {
