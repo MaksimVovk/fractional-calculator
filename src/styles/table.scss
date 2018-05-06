@@ -1,0 +1,31 @@
+@import 'colors';
+
+table {
+  width: 100%;
+
+  border: none;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 5px 15px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  th {
+    height: 30px;
+  }
+  tbody {
+    tr {
+      &:hover {
+        background-color: $primary-hover-color;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
