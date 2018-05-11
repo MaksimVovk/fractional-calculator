@@ -69,10 +69,8 @@
         const firstNum = [...this.firstNumber]
         const secondNum = [...this.secondNumber]
         const calculation = this.equally(this.firstNumber, this.secondNumber, this.operation)
-        // const calculation = eval(`${fraction(this.firstNumber[0], this.firstNumber[1])} ${this.operation} ${fraction(this.secondNumber[0], this.secondNumber[1])}`)
 
         this.result = [fraction(calculation).n, fraction(calculation).d]
-
         this.$store.dispatch('setResult', {
           firstNumber: firstNum,
           secondNumber: secondNum,
