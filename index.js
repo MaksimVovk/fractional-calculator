@@ -10,8 +10,8 @@ const compiler = webpack(webpackConfig)
 const instance = webpackDevMiddleware(compiler, { noInfo: true, lazy: false })
 app.use(instance)
 app.use(webpackHotMiddleware(compiler))
-app.use(express.static(`${__dirname}/public`))
-app.use((req, res, next) => res.sendFile(`${__dirname}/public/index.html`))
+app.use(express.static(`${__dirname}`))
+app.use((req, res, next) => res.sendFile(`${__dirname}/index.html`))
 
 const server = app.listen(8080)
 

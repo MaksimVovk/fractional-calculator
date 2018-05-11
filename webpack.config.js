@@ -1,12 +1,12 @@
 const webpack = require('webpack')
 
-const styleLoaderChain = `css-loader!resolve-url-loader!sass-loader?{"includePaths":["${__dirname}/../src/styles"],"sourceMap":true}`
+const styleLoaderChain = `css-loader!resolve-url-loader!sass-loader?{"includePaths":["${__dirname}/src/assets/styles"],"sourceMap":true}`
 
 module.exports = {
-  entry: `${__dirname}/client.js`,
+  entry: `${__dirname}/src/main.js`,
   output: {
     publicPath: '/',
-    path: `${__dirname}/public`,
+    path: `${__dirname}`,
     filename: 'bundle.js',
   },
   module: {
@@ -32,11 +32,11 @@ module.exports = {
     ],
   },
   resolve: {
-    modules: ['node_modules', `${__dirname}/../src`],
+    modules: ['node_modules', `${__dirname}`],
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: `${__dirname}/public`,
+    contentBase: `${__dirname}`,
     historyApiFallback: { index: '/' },
   },
 }

@@ -2,9 +2,9 @@
   "name": "fractional-calculator",
   "version": "1.0.0",
   "description": "test app ",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "start": "node --harmony ./app/server.js"
+    "start": "node --harmony index.js"
   },
   "repository": {
     "type": "git",

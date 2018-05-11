@@ -3,7 +3,7 @@ import ClickOutside from 'vue-click-outside'
 export default {
   install (Vue) {
 
-    const components = require.context('./components', true, /\.vue$/)
+    const components = require.context('./', true, /\.vue$/)
     components.keys().forEach(k => Vue.component(getModuleName(k), components(k).default))
 
     Vue.directive('click-outside', ClickOutside)

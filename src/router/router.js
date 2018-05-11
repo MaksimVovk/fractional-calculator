@@ -1,6 +1,6 @@
 import VueRouter from 'vue-router'
-import main from './pages/main/main.vue'
-import fractionDetails from './pages/fraction-details/fraction-details.vue'
+import main from '../component/main.vue'
+import fractionDetails from '../component/fraction-details.vue'
 
 
 const routes = [
